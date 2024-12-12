@@ -92,7 +92,23 @@ public class Juego_tres_en_raya {
                     if (!tablero[0][i].equals(" ") && tablero[0][i].equals(tablero[1][i]) && tablero[1][i].equals(tablero[2][i])) {
                         ganador = true;
                     }
-                }                
+                } 
+                
+                // Verificar diagonales
+                if (!tablero[0][0].equals(" ") && tablero[0][0].equals(tablero[1][1]) && tablero[1][1].equals(tablero[2][2])) {
+                    ganador = true;
+                }
+                if (!tablero[0][2].equals(" ") && tablero[0][2].equals(tablero[1][1]) && tablero[1][1].equals(tablero[2][0])) {
+                    ganador = true;
+                }
+
+                if (ganador) {
+                    System.out.println(turno + " ha ganado");
+                    juegoTerminado = true;
+                }
+                
+                
+                
 	}
 
 }
