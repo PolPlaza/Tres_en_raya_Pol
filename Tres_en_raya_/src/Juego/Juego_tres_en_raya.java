@@ -61,6 +61,14 @@ public class Juego_tres_en_raya {
                     System.out.println("Movimiento inválido, intenta de nuevo.");
                     continue; // Si el movimiento no es válido, se repite el turno
                 }
+                
+                // Colocar ficha en el tablero
+                if (turno.equals(jugador1)) {
+                    tablero[fila][columna] = "X"; // Si es el turno de jugador1, coloca "X"
+                } else {
+                    tablero[fila][columna] = "O"; // Si no, coloca "O" para el jugador2
+                }
+                movimientos++;
 	}
 
 }
