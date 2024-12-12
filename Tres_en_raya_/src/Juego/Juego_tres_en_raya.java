@@ -42,7 +42,28 @@ public class Juego_tres_en_raya {
             }
             System.out.println(turno + " empieza");
             
-            
+            // Variables para controlar el juego
+            boolean juegoTerminado = false;
+            int movimientos = 0;
+
+            // Comienza el juego
+            while (!juegoTerminado) {
+
+                // Solicitar movimiento
+                System.out.println(turno + ", es tu turno.");
+                System.out.print("Elige fila (1-3): ");
+                int fila = s.nextInt() - 1;
+                System.out.print("Elige columna (1-3): ");
+                int columna = s.nextInt() - 1;
+                
+                // Verificar si el movimiento es válido
+                if (fila < 0 || fila >= 3 || columna < 0 || columna >= 3 || !tablero[fila][columna].equals(" ")) {
+                    System.out.println("Movimiento inválido, intenta de nuevo.");
+                    continue; // Si el movimiento no es válido, se repite el turno
+                }
 	}
 
 }
+
+		
+	}
