@@ -81,6 +81,14 @@ public class Juego_tres_en_raya {
                 }
                 movimientos++;
                 
+                // Verificar si hay un ganador (filas, columnas, diagonales)
+                boolean ganador = false;
+                for (int i = 0; i < 3; i++) {
+                    // Verificar filas
+                    if (!tablero[i][0].equals(" ") && tablero[i][0].equals(tablero[i][1]) && tablero[i][1].equals(tablero[i][2])) {
+                        ganador = true;
+                    }
+                
 	}
 
 }
