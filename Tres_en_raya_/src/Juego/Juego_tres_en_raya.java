@@ -69,7 +69,7 @@ public class Juego_tres_en_raya {
                 
                 // Verificar si el movimiento es válido
                 if (fila < 0 || fila >= 3 || columna < 0 || columna >= 3 || !tablero[fila][columna].equals(" ")) {
-                    System.out.println("Movimiento inválido, intenta de nuevo.");
+                    System.out.println("Movimiento incorrecto, vuelve a intentarlo.");
                     continue; // Si el movimiento no es válido, se repite el turno
                 }
                 
@@ -121,11 +121,17 @@ public class Juego_tres_en_raya {
                         turno = jugador1; // Si es el turno de jugador2, cambia al jugador1
                     }
                 }
-            }                
-                
-	}
+            } 
+            
+            // Preguntar si quieren jugar otra vez
+            System.out.print("¿Quieren jugar otra vez? (S/N): ");
+            char respuesta = s.next().charAt(0);
+            if (respuesta == 'S') {
+                main(args); // Reinicia el juego
+            } else {
+                System.out.println("El juego ha terminado");
+            }
 
-}
-
-		
+        }
+              
 	}
