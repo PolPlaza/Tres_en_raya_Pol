@@ -107,7 +107,21 @@ public class Juego_tres_en_raya {
                     juegoTerminado = true;
                 }
                 
-                
+                // Verificar si hay empate
+                if (movimientos == 9 && !ganador) {
+                    System.out.println("Empate");
+                    juegoTerminado = true;
+                }                
+
+                // Cambiar de turno
+                if (!juegoTerminado) {
+                    if (turno.equals(jugador1)) {
+                        turno = jugador2; // Si es el turno de jugador1, cambia al jugador2
+                    } else {
+                        turno = jugador1; // Si es el turno de jugador2, cambia al jugador1
+                    }
+                }
+            }                
                 
 	}
 
