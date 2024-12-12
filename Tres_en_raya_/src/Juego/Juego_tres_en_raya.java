@@ -88,7 +88,11 @@ public class Juego_tres_en_raya {
                     if (!tablero[i][0].equals(" ") && tablero[i][0].equals(tablero[i][1]) && tablero[i][1].equals(tablero[i][2])) {
                         ganador = true;
                     }
-                
+                    // Verificar columnas
+                    if (!tablero[0][i].equals(" ") && tablero[0][i].equals(tablero[1][i]) && tablero[1][i].equals(tablero[2][i])) {
+                        ganador = true;
+                    }
+                }                
 	}
 
 }
