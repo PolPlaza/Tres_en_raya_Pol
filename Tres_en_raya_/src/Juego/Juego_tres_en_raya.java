@@ -19,18 +19,18 @@ public class Juego_tres_en_raya {
             System.out.println("3. Si el tablero se llena sin ganador, será un empate.");
             System.out.println("Cuando termine el juego, podrás elegir si deseas jugar otra vez.");
 
-            // Inicializar tablero vacío
+         // Inicializar tablero vacío
             String[][] tablero = new String[3][3];
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
-                    tablero[i][j] = " "; // Todas las casillas inician vacias
+                    tablero[i][j] = " "; // Todas las casillas inician vacías
                 }
             }
 	        
             // Pidimos los nombres de los jugadores
-            System.out.print("Ingrese el nombre del jugador1: ");
+            System.out.print("Ingrese el nombre del jugador 1: ");
             String jugador1 = s.nextLine();
-            System.out.print("Ingrese el nombre del jugador2: ");
+            System.out.print("Ingrese el nombre del jugador 2: ");
             String jugador2 = s.nextLine();
 
             // Determinar quién comienza
@@ -40,14 +40,25 @@ public class Juego_tres_en_raya {
             } else {
                 turno = jugador2;
             }
-            System.out.println(turno + " empieza");
+            System.out.println(turno + " empieza.");
             
             // Variables para controlar el juego
             boolean juegoTerminado = false;
             int movimientos = 0;
 
-            // Comienza el juego
             while (!juegoTerminado) {
+                // Mostrar el tablero
+                System.out.println("-------------");
+                for (int i = 0; i < 3; i++) {
+                    System.out.print("| ");
+                    for (int j = 0; j < 3; j++) {
+                        System.out.print(tablero[i][j] + " | ");
+                    }
+                    System.out.println();
+                    if (i < 2) System.out.println("-------------");
+                }
+                System.out.println("-------------");
+                
 
                 // Solicitar movimiento
                 System.out.println(turno + ", es tu turno.");
@@ -61,14 +72,6 @@ public class Juego_tres_en_raya {
                     System.out.println("Movimiento inválido, intenta de nuevo.");
                     continue; // Si el movimiento no es válido, se repite el turno
                 }
-                
-                // Colocar ficha en el tablero
-                if (turno.equals(jugador1)) {
-                    tablero[fila][columna] = "X"; // Si es el turno de jugador1, coloca "X"
-                } else {
-                    tablero[fila][columna] = "O"; // Si no, coloca "O" para el jugador2
-                }
-                movimientos++;
 	}
 
 }
