@@ -27,6 +27,22 @@ public class Juego_tres_en_raya {
                 }
             }
 	        
+            // Pidimos los nombres de los jugadores
+            System.out.print("Ingrese el nombre del jugador1: ");
+            String jugador1 = s.nextLine();
+            System.out.print("Ingrese el nombre del jugador2: ");
+            String jugador2 = s.nextLine();
+
+            // Determinar quién comienza
+            String turno;
+            if (random.nextInt(2) == 0) {
+                turno = jugador1;
+            } else {
+                turno = jugador2;
+            }
+            System.out.println(turno + " empieza");
+            
+            
 	}
 
 }
